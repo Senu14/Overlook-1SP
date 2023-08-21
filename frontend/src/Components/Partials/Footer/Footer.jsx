@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const Footer = () => {
+function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <div className='collected-Nav'>
+    <footer>
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+    </div>
+  );
 }
 
 export default Footer;
