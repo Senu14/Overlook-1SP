@@ -16,7 +16,7 @@ const AppRouter = () => {
      <Routes>
      <Route index path="/" element={<Forside />} />
      <Route path= "/" element={<Navigation />} />
-     <Route path="/HotellerDestinationer" element={<HotellerDestinationer />} />
+     <Route path="/Hoteller & Destinationer" element={<HotellerDestinationer />} />
      <Route path="/Værelser" element={<Værelser />} />
      <Route path="/Reservation" element={<Reservation />} />
      <Route path="/login" element={<Login/>} />
