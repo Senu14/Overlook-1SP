@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Cards from '../../Components/Cards/Cards';
+import headerImage from '../../Assets/Images/frankfurt-skyline-germany.jpg'; 
 import './Forside.scss';
 // import cors from 'cors';
 import axios from 'axios';
 
 const Forside = () => {
   const [data, setData] = useState([]);
+  
   
   useEffect(() => {
     const fatchData = async () => {
@@ -23,10 +25,11 @@ const Forside = () => {
   
   return (
     <>
-    <header className="media">
-    {/* <img src={process.env.PUBLIC_URL + '../../Assets/Images/frankfurt-skyline-germany.jpg'} alt="media" /> */}
-       <img src={require("../../Assets/Images/frankfurt-skyline-germany.jpg")} alt='media' />
+     <header>
+     <img src={headerImage} alt="Header" />
      </header>
+
+     
     <div className="news-container">
       {
         data.map((item, index) => {

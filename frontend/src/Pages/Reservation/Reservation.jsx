@@ -15,6 +15,7 @@ function Reservation () {
   const [hotel, setHotel] = useState('');
   const [værelse, setVarelse] = useState('');
   const [personer, setPersoner] = useState('');
+  const [Kommentarer, setKommentarer] = useState('');
 
   const handleHotelChange = (event) => {
     setHotel(event.target.value)
@@ -43,6 +44,7 @@ function Reservation () {
       hotel,
       værelse,
       personer,
+      Kommentarer,
     }
   console.log(reservationData); 
 
@@ -118,44 +120,52 @@ function Reservation () {
         <div className="form-date" style={{ flex: 1 }}>
           <input type="date" value={endDate} 
           onChange={(e) => setEndDate(e.target.value)} 
-          required style={{ width: "130%" }}/>
+          required style={{ width: "150%" }}/>
         </div>
         </div>
         
 {/* kmmenter her*/}
-        <label>
-          <input className='mini-form' type="text" 
+        <label className='mini-form'>
+          <input type="text" 
           placeholder="Fornavn" value={fornavn} 
           onChange={(e) => setFornavn(e.target.value)} />
         </label>
         <br />
 
-        <label>
-          <input  className='mini-form' type="text" 
+        <label className='mini-form'>
+          <input type="text" 
           placeholder="Efternavn" value={efterNavn} 
           onChange={(e) => setEfternavn(e.target.value)} />
         </label>
         <br />
+{/* kmmenter her*/}
 
-        <label>
-          <input className='mini-form' type="email" 
+        <div style={{ display: "flex", gap: "1rem" }}>
+        <label className='mini-info' style={{ flex: 2 }}>
+          <input type="email" 
           placeholder="Email" value={email} 
-          onChange={(e) => setEmail(e.target.value)} />
+          onChange={(e) => setEmail(e.target.value)} style={{ width: "100%" }}/>
         </label>
         <br />
 
-
-
-{/* kmmenter her*/}
-        <label>
+        <label className='mini-info' style={{ flex: 1 }}>
           <input type="number" 
           placeholder="Telefon" value={telefon} 
-          onChange={(e) => setTelefon(e.target.value)} />
+          onChange={(e) => setTelefon(e.target.value)} style={{ width: "270%" }} />
         </label>
         <br />
+        </div>
 
-        <div className="form-group">
+        <label for="Textarea"></label>
+    <textarea placeholder="Kommentarer" value={Kommentarer} id="Textarea" rows="5" cols="58"></textarea>
+
+    <label className='kryds'>
+        <input type="radio" name="Pris" value="kryds"/> Jeg accepterer hermed Overlooks betingelser (sæt kryds)
+    </label>
+
+        <div className="form-button">
           <button type="submit">Send Reservation</button>
+          <button type="submit">Annuller</button>
         </div>
       </form>
     </div>

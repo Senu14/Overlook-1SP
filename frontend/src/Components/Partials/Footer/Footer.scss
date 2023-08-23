@@ -1,13 +1,58 @@
-.lille-footer {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 10px;
-     background-color:  white;
- 
-     h1 {
-       font-size: 34px;
-       color: #333;
-       margin: 0;
-     }
+@use "../../../Assets/Colors/Colors.scss" as s;
+
+.main-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 0.2rem 0rem;
+  background-color: s.$white;
+
+  p {
+    font-size: 1em;
+    color: s.$darkgrey;
+    font-weight: 400;
+    padding-left: 0.1rem;
+  }
+
+.footerNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    ul {
+      display: flex;
+
+      li {
+        list-style: none;
+        margin: 0.5rem;
+
+        a {
+          text-decoration: none;
+          color: s.$darkgrey;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-footer {
+    flex-direction: column;
+
+    p {
+      padding-left: 1rem;
+    }
+
+    .footerNav {
+      ul {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem;
+      }
+    }
+  }
 }

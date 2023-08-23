@@ -1,60 +1,57 @@
-body {
-     margin: 0;
-     padding: 0;
-   
-   .collected-Nav {
-     background-color: black;
-     padding: 10px;
+@use "../../../Assets//Colors/Colors.scss" as s;
+.collected-Nav {
+     background-color: s.$black;
+     padding: 20px;
      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-     header {
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       padding: 10px;
+     align-items: center;
+     width: 100%;
+     padding: 0.5rem 0rem;
+     
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
        
-   
-       h1 {
-         font-size: 34px;
-         color: #333;
-         margin: 0;
-       }
-   
-       nav {
-         display: flex;
-         justify-content: flex-start;
-         img {
-          text-align: center;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          
-         }
-   
-         .Links {
-           text-decoration: none;
-           list-style-type: none;
-           margin-left: 20px;
-           padding: 5px;
-           transition: color 0.2s ease-in-out;
+    h1 {
+      font-size: 34px;
+      color:s.$grey;
+      margin: 0;
+      }
+}
+    nav {
+      display: flex;
+      justify-content: flex-start;
+     
+      
+.Links {
+  text-decoration: none;
+  list-style-type: none;
+  margin-right: 15px;
+ 
+  
+  padding: 5px;
+  transition: color 0.2s ease-in-out;
         
    
-           li.header__menu {
-             color: white;
-             cursor: pointer;
+li.header__menu {
+  color: s.$white;
+  cursor: pointer;
    
-             &:hover {
-               color: #555;
-             }
+&:hover {
+  color: s.$grey;
+}
    
-             &.active {
-               font-weight: bold;
-               color: #000;
-             }
-           }
-         }
-       }
-     }
+&.active {
+  font-weight: bold;
+  color: s.$black;
+        }
+      }
+    }
    }
+  }
+ 
+
+@media screen and (max-width: 768px) {
+
    }

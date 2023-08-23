@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+
 import './Login.scss'
 
-
+//Here starts Loin Form
 const LoginForm = ({ onSubmit }) => {
   const [email, setEmail] = useState('');
   const [Adgangskode, setAdgangskode] = useState('');
@@ -17,7 +18,7 @@ const LoginForm = ({ onSubmit }) => {
       <h2>Login</h2>
       <p>Indtast dit brugernavn og adgangskode for at logge ind</p>
       <label>
-        <input 
+        <input className='login'
           type="email"
           placeholder="Email"
           value={email}
@@ -27,7 +28,7 @@ const LoginForm = ({ onSubmit }) => {
 
       <br />
       <label>
-        <input 
+        <input className='login'
           type="password"
           placeholder="Adgangskode"
           value={Adgangskode}
@@ -113,12 +114,12 @@ const Login = () => {
         <LoginForm onSubmit={handleLogin} />
       )}
       <p>
-        {showSignUp
+        {/* {showSignUp
           ? 'Already have an account?'
           : "Don't have an account yet?"}
         <button onClick={() => setShowSignUp(!showSignUp)}>
           {showSignUp ? 'Login' : 'Sign Up'}
-        </button>
+        </button> */}
       </p>
     </div>
 
