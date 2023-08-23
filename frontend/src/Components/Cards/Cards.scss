@@ -1,0 +1,21 @@
+.product-card {
+     background-color: #fff;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     padding: 15px;
+     max-width: 250px;
+     
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+     img {
+       max-width: 100%;
+       height: auto;
+     }
+   
+     h3 {
+       margin-top: 10px;
+       font-size: 1.2rem;
+       color: #333;
+     }
+   }
+   

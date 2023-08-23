@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 //import All Pages
 import Forside from '../../Pages/Forside/Forside';
-import HotellerDestinationer from '../../Pages/HotellerDestinationer/HottelerDestinationer';
+import HotellerDestinationer from '../../Pages/HotellerDestinationer/HotelerDestinationer';
 import Værelser from '../../Pages/Værelser/Værelser';
 import Reservation from '../../Pages/Reservation/Reservation';
 import Login from '../../Pages/Login/Login';

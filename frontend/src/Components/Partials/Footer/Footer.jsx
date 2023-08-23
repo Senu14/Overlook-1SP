@@ -3,7 +3,7 @@ import './Footer.scss'
 
 function Footer() {
   return (
-    <div className='collected-Nav'>
+    <div className='lille-footer'>
     <footer>
       <p>&copy; 2023 Your Website. All rights reserved.</p>
     </footer>
