@@ -44,10 +44,11 @@
 }
 .group-værelse {
      margin-bottom: 15px;
-          
+   
      
      select,
      input {
+         
           width: 60%;
           padding: 10px;
           border-radius: 5px;
@@ -74,12 +75,22 @@
      
      select,
      input {
-   
-        width: 50%;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 13px;
+        width: 100%;
+        padding: 5px;
+        border-radius: 3px;
      }
 
 }
+.mini-form {
+     margin-bottom: 3px;
+     width: 140%;
+     padding: 10px;
+     border-radius: 5px;
+     font-size: 13px;
+
+     
+
+}
+
+
    

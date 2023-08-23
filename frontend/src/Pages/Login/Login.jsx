@@ -17,7 +17,7 @@ const LoginForm = ({ onSubmit }) => {
       <h2>Login</h2>
       <p>Indtast dit brugernavn og adgangskode for at logge ind</p>
       <label>
-        <input
+        <input 
           type="email"
           placeholder="Email"
           value={email}
@@ -27,7 +27,7 @@ const LoginForm = ({ onSubmit }) => {
 
       <br />
       <label>
-        <input
+        <input 
           type="password"
           placeholder="Adgangskode"
           value={Adgangskode}
@@ -58,7 +58,7 @@ const SignUpForm = ({ onSubmit }) => {
       <h2>Sign Up</h2>
       <label>
         Navn:
-        <input
+        <input 
           type="text"
           value={Navn}
           onChange={(e) => setNavn(e.target.value)}

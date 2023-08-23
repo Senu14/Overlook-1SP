@@ -21,7 +21,7 @@ function Reservation () {
     // event.handleHotelChange();
   }
 
-  const handleVarelseChange = (event) => {
+  const handleVærelseChange = (event) => {
     setVarelse(event.target.value)
   }
 
@@ -70,29 +70,33 @@ function Reservation () {
 
       <div className="form-group">
           <select value={hotel} onChange={handleHotelChange}>
-            <option value="1">Vælg destination & hotel</option>
+            <option>Vælg destination & hotel</option>
+            <option value="1">option</option>
             <option value="2">option</option>
             <option value="3">option</option>
-            <option value="4">option</option>
           </select>
         </div>
 
-        <div className="group-værelse">
-          <select value={værelse} onChange={handleVærelseChange}>
-            <option value="1">Vælg værelsestype</option>
+        <div style={{ display: "flex", gap: "1rem" }}>
+        <div className="group-værelse" style={{ flex: 3 }}>
+          <select value={værelse} onChange={handleVærelseChange} style={{ width: "100%" }}>
+            <option>Vælg værelsestype</option>
+            <option value="1">1 værelse</option>
             <option value="2">2 værelse</option>
             <option value="3">3 værelse</option>
-            <option value="4">4 værelse</option>
           </select>
         </div>
         
-        <div className="group-personer">
-          <select value={personer} onChange={handlePersonerChange}>
-            <option value="1">Vælg antal personer</option>
+        
+        
+        <div className="group-personer"style={{ flex: 1 }}>
+          <select value={personer} onChange={handlePersonerChange} style={{ width: "310%" }}>
+            <option>Vælg antal personer</option>
+            <option value="1">1 personer</option>
             <option value="2">2 personer</option>
             <option value="3">3 personer</option>
-            <option value="4">4 personer</option>
           </select>
+        </div>
         </div>
 
         <h4>Vælg Prisklasse</h4>
@@ -103,31 +107,50 @@ function Reservation () {
           <input type="radio" name="Pris" value="Flex"/> Flex
         </label>
 
-        <div className="form-date">
-          <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} required />
+{/* kmmenter her*/}
+        <div style={{ display: "flex", gap: "7rem" }}>
+        <div className="form-date" style={{ flex: 2 }}>
+          <input type="date" value={startDate} 
+          onChange={(e) => setStartDate(e.target.value)} 
+          required style={{ width: "130%" }}/>
         </div>
 
-        <div className="form-date">
-          <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} required />
+        <div className="form-date" style={{ flex: 1 }}>
+          <input type="date" value={endDate} 
+          onChange={(e) => setEndDate(e.target.value)} 
+          required style={{ width: "130%" }}/>
         </div>
-
+        </div>
+        
+{/* kmmenter her*/}
         <label>
-          <input type="text" placeholder="Fornavn" value={fornavn} onChange={(e) => setFornavn(e.target.value)} />
+          <input className='mini-form' type="text" 
+          placeholder="Fornavn" value={fornavn} 
+          onChange={(e) => setFornavn(e.target.value)} />
         </label>
         <br />
 
         <label>
-          <input type="text" placeholder="Efternavn" value={efterNavn} onChange={(e) => setEfternavn(e.target.value)} />
+          <input  className='mini-form' type="text" 
+          placeholder="Efternavn" value={efterNavn} 
+          onChange={(e) => setEfternavn(e.target.value)} />
         </label>
         <br />
 
         <label>
-          <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input className='mini-form' type="email" 
+          placeholder="Email" value={email} 
+          onChange={(e) => setEmail(e.target.value)} />
         </label>
         <br />
 
+
+
+{/* kmmenter her*/}
         <label>
-          <input type="number" placeholder="Telefon" value={telefon} onChange={(e) => setTelefon(e.target.value)} />
+          <input type="number" 
+          placeholder="Telefon" value={telefon} 
+          onChange={(e) => setTelefon(e.target.value)} />
         </label>
         <br />
 

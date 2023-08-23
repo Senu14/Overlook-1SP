@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Cards from '../../Components/Cards/Cards';
 import './Forside.scss';
-import cors from 'cors';
+// import cors from 'cors';
+import axios from 'axios';
 
 const Forside = () => {
   const [data, setData] = useState([]);
+  
   useEffect(() => {
     const fatchData = async () => {
       try { 
-        const response = await fetch('http://localhost:4000/news');
+        const response = await axios.get('http://localhost:4000/news');
+        setData(response.data);
         const jsonData = await response.json();
-        setData(jsonData.slice(0,12));
+        (jsonData.slice(0,3));
       }catch (error) { 
         console.log('error fetching data:', error);
       }
@@ -26,10 +29,10 @@ const Forside = () => {
      </header>
     <div className="news-container">
       {
-        data.map((news, index) => {
+        data.map((item, index) => {
 
-         return <Cards key={index} item={{image:news.images,title:news.title, 
-                                          teaser:news.teaser, filname:news.filname}}/> 
+         return <Cards key={index} item={{image:item.images,title:item.title, 
+                                          teaser:item.teaser, filname:item.filname}}/> 
 
         })
       }
