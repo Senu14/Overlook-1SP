@@ -5,11 +5,11 @@ import './Login.scss'
 
 const LoginForm = ({ onSubmit }) => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [Adgangskode, setAdgangskode] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ email, password });
+    onSubmit({ email, Adgangskode });
   };
 
   return (
@@ -19,7 +19,7 @@ const LoginForm = ({ onSubmit }) => {
       <label>
         <input
           type="email"
-          placeholder="Brugernavn"
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -30,8 +30,8 @@ const LoginForm = ({ onSubmit }) => {
         <input
           type="password"
           placeholder="Adgangskode"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={Adgangskode}
+          onChange={(e) => setAdgangskode(e.target.value)}
         />
       </label>
 
@@ -43,13 +43,13 @@ const LoginForm = ({ onSubmit }) => {
 
 //Here starts Signup Form
 const SignUpForm = ({ onSubmit }) => {
-  const [fullname, setFullName] =useState ('');
+  const [Navn, setNavn] =useState ('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [Adgangskode, setAdgangskode] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ fullname, email, password });
+    onSubmit({ Navn, email, Adgangskode });
     
   };
 
@@ -57,11 +57,11 @@ const SignUpForm = ({ onSubmit }) => {
     <form onSubmit={handleSubmit}>
       <h2>Sign Up</h2>
       <label>
-        FullName:
+        Navn:
         <input
           type="text"
-          value={fullname}
-          onChange={(e) => setFullName(e.target.value)}
+          value={Navn}
+          onChange={(e) => setNavn(e.target.value)}
         />
       </label>
      
@@ -77,11 +77,11 @@ const SignUpForm = ({ onSubmit }) => {
 
       <br />
       <label>
-        Password:
+        Adgangskode:
         <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          type="Password"
+          value={Adgangskode}
+          onChange={(e) => setAdgangskode(e.target.value)}
         />
       </label>
 
@@ -94,12 +94,12 @@ const SignUpForm = ({ onSubmit }) => {
 
 const Login = () => {
   const handleLogin = (data) => {
-    // Handle login logic
+    // her håndter vi login 
     console.log('Login:', data);
   };
 
   const handleSignUp = (data) => {
-    // Handle sign up logic
+    // her håndter vi signup 
     console.log('Sign Up:', data);
   };
 
@@ -121,6 +121,9 @@ const Login = () => {
         </button>
       </p>
     </div>
+
+
+
   );
 };
 

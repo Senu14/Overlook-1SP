@@ -3,9 +3,11 @@ import './Cards.scss'
 
 const Cards = ({ item }) => {
     return (
-        <div className='product-card'>
-            <img src={item.image} alt="Products" />
+        <div className='news-card'>
+            <img src={item.image} alt="" />
             <h3>{item.title}</h3>
+            <h1>{item.filname}</h1>
+            <p>{item.teaser}</p>
             
         </div>
     );

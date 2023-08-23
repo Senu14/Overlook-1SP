@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Cards from '../../Components/Cards/Cards';
 import './Forside.scss';
+import cors from 'cors';
 
 const Forside = () => {
   const [data, setData] = useState([]);
@@ -19,14 +20,16 @@ const Forside = () => {
   
   return (
     <>
-    <div className="media">
-       <img src={require("../../Assets/Images/frankfurt-skyline-germany.jpg")} alt='' />
-     </div>
-    <div className="products-container">
+    <header className="media">
+    {/* <img src={process.env.PUBLIC_URL + '../../Assets/Images/frankfurt-skyline-germany.jpg'} alt="media" /> */}
+       <img src={require("../../Assets/Images/frankfurt-skyline-germany.jpg")} alt='media' />
+     </header>
+    <div className="news-container">
       {
-        data.map((products, index) => {
+        data.map((news, index) => {
 
-         return <Cards key={index} item={{image:products.images,title:products.title}}/> 
+         return <Cards key={index} item={{image:news.images,title:news.title, 
+                                          teaser:news.teaser, filname:news.filname}}/> 
 
         })
       }
