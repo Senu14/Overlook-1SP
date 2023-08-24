@@ -1,13 +1,18 @@
 @use "../../Assets/Colors/Colors.scss" as s;
 form {
-     max-width: 300px;
+     max-width: 270px;
      margin: 0 auto;
-   }
+     margin-top: 30px;
+ 
    
    h2 {
-     margin-bottom: 20px;
+     margin-top: 10px;
      text-align: center;
-   }
+    }
+    p {
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
    
    label {
      display: block;
@@ -18,18 +23,22 @@ form {
    input[type="email"],
    input[type="password"] {
      width: 100%;
-     padding: 5px;
+     padding: 9px;
+    //  margin-top: 20px;
      border-radius: 3px;
    }
-   
+   .login-button{
+    gap: 3em; 
+    display: flex;
    button[type="submit"] {
-     display: block;
-     width: 50%;
+     width: 100%;
      padding: 10px;
      border-radius: 3px;
-     background-color: red;
-     color: white;
-     font-weight: bold;
-     display: block;
-     margin: 0 auto;
+     background-color: s.$red;
+     color: s.$white;
+     font-weight: 100;
+
+    
    }
+  }
+}

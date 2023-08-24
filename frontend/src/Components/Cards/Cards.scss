@@ -1,6 +1,7 @@
+@use "../../Assets/Colors/Colors.scss" as s;
 .news-card {
-     background-color: #fff;
-     border: 1px solid #ccc;
+     background-color: s.$white;
+     border: 1px solid s.$lightgrey;
      border-radius: 5px;
      padding: 15px;
      max-width: 250px;
@@ -12,13 +13,13 @@
      }
    
      h3 {
-       margin-top: 10px;
-       font-size: 1.2rem;
-       color: #333;
-     }
-     h1 {
       margin-top: 10px;
-      font-size: 1.1rem;
-  }
+      font-size: 1.2rem;
+      color: s.$red;
+      text-decoration: none;
+     
+     }
+    
+  
    }
    

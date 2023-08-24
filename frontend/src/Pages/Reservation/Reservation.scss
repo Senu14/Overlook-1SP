@@ -1,41 +1,47 @@
 @use "../../Assets/Colors/Colors.scss" as s;
 .reservation-form {
      max-width: 600px;
-     margin: 0 auto;
+     height: 700px;
+     margin: auto;
      padding: 20px;
    
      h2 {
-       font-size: 24px;
-       margin-bottom: 10px;
+       font-size: 19px;
+       margin-bottom: 6px;
+       margin-top: 1px;
+       margin-left: 13em;
+       font-family: "Open-sans", sans-serif;
      }
    
      p {
-       font-size: 16px;
-       margin-bottom: 20px;
-       margin-left: 9.3em;
+       font-size: 14px;
+       margin-bottom: 10px;
+       margin-left: 12em;
+       padding-top: 10px;
+       font-family: "Open-sans", sans-serif;
      }
 
 .form-group {
-     margin-bottom: 15px;
+     margin-bottom: 13px;
    
      label {
         display: block;
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 5px;
      }
    
      select,
      input {
-         width: 150%;
+         width: 100%;
          padding: 10px;
         
          border-radius: 5px;
-         font-size: 16px;
+         font-size: 14px;
 
      
        }
      }
-   }
+  
 
 .group-værelse {
      margin-bottom: 15px;
@@ -47,8 +53,13 @@
           width: 60%;
           padding: 10px;
           border-radius: 5px;
-          font-size: 13px;
+          font-size: 14px;
           }
+}
+h4 {
+     margin-bottom: 0.1em;
+     margin-top: 0.1em;
+
 }
 .group-personer {
      margin-bottom: 15px;
@@ -58,7 +69,7 @@
         width: 50%;
         padding: 10px;
         border-radius: 5px;
-        font-size: 13px;
+        font-size: 14px;
      }
 }
 .form-date {
@@ -73,37 +84,55 @@
 
 }
 .mini-form {
-     margin-bottom: 3px;
-     width: 140%;
-          padding: 10px;
-          padding: 5px;
-          border-radius: 3px;
-          font-size: 13px;
+     margin-bottom: 1px;
+     select,
+     input {
+        width: 94%;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+}
 }
 .mini-info {
-     margin-bottom: 15px;
+     margin-bottom: 16px;
+    
 
      select,
      input {
-        width: 100%;
-        padding: 5px;
+        padding: 6px;
         border-radius: 3px;
      }
 }
+textarea {
+     margin-top: 0.1px;
+}
 .kryds{
-     font-size: 16px;
-     margin-bottom: 20px;
+     font-size: 14px;
+     margin-bottom: 12px;
      margin-top: 10px;
      margin-left: 0rem;
     
 }
 .form-button {
-     margin: 7px;
-     display: flex; 
-     gap: 0.7em;
-     justify-content: space-evenly;
+     display: flex;
+     gap: 0.8em; 
+     
+   button {
+     font-size: 14px;
+     font-family: "Open-sans", sans-serif;
+     width: 100%;
+     padding: 10px;
+     border-radius: 3px;
+     background-color: s.$red;
+     color: s.$white;
+     font-weight: 100;
+     
+     
+    
+       }
+    
     
     
 }
 
-   
+}  

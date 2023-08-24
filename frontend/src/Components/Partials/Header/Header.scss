@@ -1,35 +1,39 @@
 @use "../../../Assets//Colors/Colors.scss" as s;
+*{
+  padding: 0;
+  margin: 0;
+}
 .collected-Nav {
      background-color: s.$black;
-     padding: 20px;
      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-     align-items: center;
      width: 100%;
-     padding: 0.5rem 0rem;
+     padding: 0.2rem 0rem;
+   
      
     header {
-      display: flex;
+      display: flex;  
       align-items: center;
       justify-content: space-between;
-      padding: 10px;
-       
-    h1 {
-      font-size: 34px;
-      color:s.$grey;
-      margin: 0;
-      }
+      font-size: 14px;
+      font-weight: 100;
+      font-family: "Open-sans", sans-serif;
+}
+img {
+  width: 20%;
 }
     nav {
       display: flex;
+      padding-top: 16px;
+      font-size: 1.3em;
+      font-weight: 100;
+      font-family: "Open-sans", sans-serif;
       justify-content: flex-start;
      
       
 .Links {
   text-decoration: none;
   list-style-type: none;
-  margin-right: 15px;
- 
-  
+  margin-right: 13px;
   padding: 5px;
   transition: color 0.2s ease-in-out;
         
@@ -37,6 +41,7 @@
 li.header__menu {
   color: s.$white;
   cursor: pointer;
+  
    
 &:hover {
   color: s.$grey;

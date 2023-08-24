@@ -1,3 +1,23 @@
+@use "./Assets/Colors/Colors.scss" as s;
+*{ 
+
+
+.Links{
+  text-decoration: none;
+  color:inherit;
+}
 .global-body-color {
   background-color: lightgray;
+  border: 1px solid #ccc;;
+       background-size: cover;
+       background-position: center top;
+       background-repeat: no-repeat;
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Poppins";
+    background: var( Warmgrey);
+    }
+}
 }

@@ -80,9 +80,9 @@ function Reservation () {
         </div>
 
         <div style={{ display: "flex", gap: "1rem" }}>
-        <div className="group-værelse" style={{ flex: 3 }}>
+        <div className="group-værelse" style={{ flex: 1}}>
           <select value={værelse} onChange={handleVærelseChange} style={{ width: "100%" }}>
-            <option>Vælg værelsestype</option>
+            <option>Værelsestype</option>
             <option value="1">1 værelse</option>
             <option value="2">2 værelse</option>
             <option value="3">3 værelse</option>
@@ -92,8 +92,8 @@ function Reservation () {
         
         
         <div className="group-personer"style={{ flex: 1 }}>
-          <select value={personer} onChange={handlePersonerChange} style={{ width: "310%" }}>
-            <option>Vælg antal personer</option>
+          <select value={personer} onChange={handlePersonerChange} style={{ width: "100%" }}>
+            <option>Antal personer</option>
             <option value="1">1 personer</option>
             <option value="2">2 personer</option>
             <option value="3">3 personer</option>
@@ -110,17 +110,17 @@ function Reservation () {
         </label>
 
 {/* kmmenter her*/}
-        <div style={{ display: "flex", gap: "7rem" }}>
-        <div className="form-date" style={{ flex: 2 }}>
+        <div style={{ display: "flex", gap: "1rem" }}>
+        <div className="form-date" style={{ flex: 1 }}>
           <input type="date" value={startDate} 
           onChange={(e) => setStartDate(e.target.value)} 
-          required style={{ width: "130%" }}/>
+          required style={{ width: "90%" }}/>
         </div>
 
         <div className="form-date" style={{ flex: 1 }}>
           <input type="date" value={endDate} 
           onChange={(e) => setEndDate(e.target.value)} 
-          required style={{ width: "150%" }}/>
+          required style={{ width: "90%" }}/>
         </div>
         </div>
         
@@ -141,7 +141,7 @@ function Reservation () {
 {/* kmmenter her*/}
 
         <div style={{ display: "flex", gap: "1rem" }}>
-        <label className='mini-info' style={{ flex: 2 }}>
+        <label className='mini-info' style={{ flex: 1}}>
           <input type="email" 
           placeholder="Email" value={email} 
           onChange={(e) => setEmail(e.target.value)} style={{ width: "100%" }}/>
@@ -151,13 +151,14 @@ function Reservation () {
         <label className='mini-info' style={{ flex: 1 }}>
           <input type="number" 
           placeholder="Telefon" value={telefon} 
-          onChange={(e) => setTelefon(e.target.value)} style={{ width: "270%" }} />
+          onChange={(e) => setTelefon(e.target.value)} style={{ width: "107%" }} />
         </label>
         <br />
         </div>
 
+{/* kmmenter her*/}
         <label for="Textarea"></label>
-    <textarea placeholder="Kommentarer" value={Kommentarer} id="Textarea" rows="5" cols="58"></textarea>
+    <textarea placeholder="Kommentarer" value={Kommentarer} id="Textarea" rows="4" cols="36"></textarea>
 
     <label className='kryds'>
         <input type="radio" name="Pris" value="kryds"/> Jeg accepterer hermed Overlooks betingelser (sæt kryds)

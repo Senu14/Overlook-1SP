@@ -37,7 +37,10 @@ const LoginForm = ({ onSubmit }) => {
       </label>
 
       <br />
+      <div className="login-button">
       <button type="submit">Login</button>
+      <button type="submit">Annuller</button>
+      </div>
     </form>
   );
 };
