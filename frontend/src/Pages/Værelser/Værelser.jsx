@@ -1,49 +1,50 @@
 import React, { useEffect, useState } from 'react';
-import SlideWrapper from '../../App/Elements/SlideWrapper/SlideWrapper';
+import SlideWrapper2 from '../../App/Elements/SlideWrapper/SlideWrapper2';
 import { Link } from 'react-router-dom';
-import './Værelser';
+import './Værelse.scss';
 // import cors from 'cors';
 import axios from 'axios';
 
 const Værelser = () => {
-  const [data, setData] = useState([]);
+  const [room, setroom] = useState([]);
   
   
   useEffect(() => {
-    const getData = async () => {
+    const getroom = async () => {
       const url = 'http://localhost:4000/destinations/danmark/aalborg/overlook-aalborg-city/standard';
       const result = await axios.get(url);
       console.log(result);
-      setData(result.data)  
+      setroom(result.room)  
       
     }
-    getData()
-  }, [setData]);
+    getroom()
+  }, [setroom]);
   
   return (
     <>
-    <SlideWrapper />
+    <SlideWrapper2 />
     <div className='news-card'>
-
-      <figure className='img-card' key={data.id}>
+{room &&
+    room.slice(0,6).map((room) =>(
+      <figure className='img-card' key={room.id}>
         <img
-        src={`http://localhost:4000/imagelist/${data.filename}`} alt="image"
+        src={`http://localhost:4000/imagelist/${room.country.image.filename}`} alt="image"
         />
                 
       <div className='overlay'>
-        <Link to={`/hotels`}>
-        <h4>{data.name}</h4>
+        <Link to={`/room`}>
+        <h4>{room.name}</h4>
         </Link>
         
       </div>
       </figure>
-   
-     
-     
+      ))} 
 </div>          
     </>
-  // );
-  ) } 
+  );
+
+ 
+} 
     
   
 

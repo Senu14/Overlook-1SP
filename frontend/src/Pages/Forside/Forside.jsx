@@ -26,6 +26,7 @@ const Forside = () => {
     <>
     <SlideWrapper />
     <div className='news-card'>
+      
 {data &&
     data.slice(0,6).map((data) =>(
       <figure className='img-card' key={data.id}>
@@ -36,6 +37,7 @@ const Forside = () => {
       <div className='overlay'>
         <Link to={`/hotels`}>
         <h4>{data.title}</h4>
+        <p>{data.teaser}</p>
         </Link>
         
       </div>

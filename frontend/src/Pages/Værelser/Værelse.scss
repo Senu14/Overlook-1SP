@@ -1,0 +1,49 @@
+@use "../../Assets/Colors/Colors.scss" as s;
+.news-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+  
+.card {
+  
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  img {
+    width: 50%;
+        
+      }
+  
+  h4 {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 100;
+      }
+    }
+  }
+  img {
+    width: 100%; 
+  }
+ .img-card {
+  background-color: s.$white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    max-width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+     
+     
+ 
+ 
+
+
+
+
+      
+      
