@@ -24,11 +24,10 @@ const Værelser = () => {
     <>
     <SlideWrapper />
     <div className='news-card'>
-{data &&
-    data.slice(0,6).map((data) =>(
+
       <figure className='img-card' key={data.id}>
         <img
-        src={`http://localhost:4000/imagelist/${data.country_image_filename}`} alt="image"
+        src={`http://localhost:4000/imagelist/${data.filename}`} alt="image"
         />
                 
       <div className='overlay'>
@@ -38,12 +37,14 @@ const Værelser = () => {
         
       </div>
       </figure>
-      ))} 
+   
+     
+     
 </div>          
     </>
-  );
-     
+  // );
+  ) } 
     
   
-}
+
 export default Værelser
