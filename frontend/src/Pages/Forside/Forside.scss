@@ -7,8 +7,7 @@
   padding: 30px;
   
 .card {
-  
-  border: 1px solid #ccc;
+  border: 1px solids s.$lightgrey;
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -27,7 +26,7 @@
     width: 100%; 
   }
  .img-card {
-  background-color: s.$white;
+    background-color: s.$white;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;

@@ -1,28 +1,15 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-
+import React from 'react'
 import './LandCard.scss'
 
+const LandCard = ({ image, city, description, date }) => {
+  return (
+    <div className="card">
+      <img src={image}  alt={city} className="card-image" />
+    <div className="card-content">
+      <h3 className="card-title">{city}</h3>
+  </div>
+ </div>
+);
+};
 
-const LandCard = () => {
-const [card, setCard] = useState([]);
-        return (
-          
-          <div className="card">
-            <img src={`http://localhost:4000/images/${card.CountryImage}`} className="card-image" />
-
-            <div className="card-content">
-            
-            <Link to={`/land`}>
-            <h4>{card.slug}</h4>
-            <p>{card.description}</p>
-            </Link>
-        
-      </div>
-     </div>
-  
-          
-        );
-      };
-// }
-export default LandCard;
+export default LandCard ;

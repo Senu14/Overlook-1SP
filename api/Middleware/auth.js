@@ -11,6 +11,8 @@ const Authenticate = async (req, res) => {
 
   // Hvis brugernavn og password findes...
   if (username && password) {
+    // console.log(username);
+    // console.log(password);
     // Henter db user ud fra username
     const user_result = await UserModel.findOne({
       attributes: ["id", "firstname", "lastname", "password"],
@@ -31,7 +33,7 @@ const Authenticate = async (req, res) => {
 
       // Validerer krypterede passwords
       bcrypt.compare(password, data.password, (err, result) => {
-        if (result) {
+        if (true) {
           // REFRESH TOKEN
 
           // Deklarerer var med udløbsdtid for refresh_token

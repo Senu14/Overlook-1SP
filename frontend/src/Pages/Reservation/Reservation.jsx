@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Reservation.scss';
+import { Navigate } from 'react-router-dom';
+
 
 function Reservation () {
+
+  const isLoggedIn = localStorage.getItem('access_token') !== null;
+
 
   const [fornavn, setFornavn] = useState('');
   const [efterNavn, setEfternavn] = useState('');
@@ -62,7 +67,10 @@ function Reservation () {
   });
 }
 
-  
+if (!isLoggedIn) {
+  return <Navigate to="/login" />; // Redirect to login if not logged in
+}
+
 
   return (
     <div className="reservation-form">

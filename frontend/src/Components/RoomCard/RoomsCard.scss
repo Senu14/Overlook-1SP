@@ -4,15 +4,15 @@
      justify-content: space-around;
    }
    
-   .card {
-     display: block;
-     width: calc(33.333% - 20px); // Three cards per row
-     height: 250px; // You can adjust the height as needed
-     margin: 10px;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     overflow: hidden;
-     position: relative;
-   }
+  //  .card {
+  //    display: block;
+  //    width: calc(33.333% - 20px); // Three cards per row
+  //    height: 250px; // You can adjust the height as needed
+  //    margin: 10px;
+  //    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  //    overflow: hidden;
+  //    position: relative;
+  //  }
    
    .card-image {
      width: 100%;

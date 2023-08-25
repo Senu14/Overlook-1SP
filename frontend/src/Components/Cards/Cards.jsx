@@ -1,29 +1,16 @@
-// import React from 'react';
-// import './Cards.scss'
-// import { Link } from 'react-router-dom';
+import React from 'react';
+import './Cards.scss'
 
+const Cards = ({ item }) => {
+    return (
+        <div className='news-card'>
+            <img src={item.image} alt="" />
+            <h3>{item.title}</h3>
+            <h1>{item.filname}</h1>
+            <p>{item.teaser}</p>
+            
+        </div>
+    );
+}
 
-//  const Cards = () => {
-//     return (
-//        <div className='news-card'>
-// {data &&
-//     data.slice(0,3).map((data) =>(
-//       <figure className='img-card' key={data.id}>
-//         <img
-//         src={`http://localhost:4000/images/${data.image.filename}`}alt="image"
-//         />
-                
-//       <div className='overlay'>
-//         <Link to={`/hotels`}>
-//         <h3>{data.title}</h3>
-//         </Link>
-//         <p>{data.teaser}</p>
-//       </div>
-//       </figure>
-//       ))} 
-// </div> 
-//        )          
-//             } 
-   
-
-// export default Cards;
+export default Cards;

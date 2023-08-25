@@ -1,9 +1,144 @@
+// import React, { useState } from 'react';
+// import { useForm } from 'react-hook-form';
+
+// import './Login.scss'
+
+// //Here starts Loin Form
+// const LoginForm = ({ onSubmit }) => {
+//   const [email, setEmail] = useState('');
+//   const [Adgangskode, setAdgangskode] = useState('');
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     onSubmit({ email, Adgangskode });
+//   };
+
+//   return (
+//     <form className='login-form' onSubmit={handleSubmit}>
+//       <h2>Login</h2>
+//       <p>Indtast dit brugernavn og adgangskode for at logge ind</p>
+//       <label>
+//         <input className='login'
+//           type="email"
+//           placeholder="Email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//         />
+//       </label>
+
+//       <br />
+//       <label>
+//         <input className='login'
+//           type="password"
+//           placeholder="Adgangskode"
+//           value={Adgangskode}
+//           onChange={(e) => setAdgangskode(e.target.value)}
+//         />
+//       </label>
+
+//       <br />
+//       <div className="login-button">
+//       <button type="submit">Login</button>
+//       <button type="submit">Annuller</button>
+//       </div>
+//     </form>
+//   );
+// };
+
+// //Here starts Signup Form
+// const SignUpForm = ({ onSubmit }) => {
+//   const [Navn, setNavn] =useState ('');
+//   const [email, setEmail] = useState('');
+//   const [Adgangskode, setAdgangskode] = useState('');
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     onSubmit({ Navn, email, Adgangskode });
+    
+//   };
+
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <h2>Sign Up</h2>
+//       <label>
+//         Navn:
+//         <input 
+//           type="text"
+//           value={Navn}
+//           onChange={(e) => setNavn(e.target.value)}
+//         />
+//       </label>
+     
+//       <br />
+//       <label>
+//         Email:
+//         <input
+//           type="email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//         />
+//       </label>
+
+//       <br />
+//       <label>
+//         Adgangskode:
+//         <input
+//           type="Password"
+//           value={Adgangskode}
+//           onChange={(e) => setAdgangskode(e.target.value)}
+//         />
+//       </label>
+
+//       <br />
+//       <button type="submit">Sign Up</button>
+      
+//     </form>
+//   );
+// };
+
+// const Login = () => {
+//   const handleLogin = (data) => {
+//     // her håndter vi login 
+//     console.log('Login:', data);
+//   };
+
+//   const handleSignUp = (data) => {
+//     // her håndter vi signup 
+//     console.log('Sign Up:', data);
+//   };
+
+//   const [showSignUp, setShowSignUp] = useState(false);
+
+//   return (
+//     <div className='global-body-color' >
+//       {showSignUp ? (
+//         <SignUpForm onSubmit={handleSignUp} />
+//       ) : (
+//         <LoginForm onSubmit={handleLogin} />
+//       )}
+//       <p>
+//         {/* {showSignUp
+//           ? 'Already have an account?'
+//           : "Don't have an account yet?"}
+//         <button onClick={() => setShowSignUp(!showSignUp)}>
+//           {showSignUp ? 'Login' : 'Sign Up'}
+//         </button> */}
+//       </p>
+//     </div>
+
+
+
+//   );
+// };
+
+// export default Login;
+
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-
 import './Login.scss'
 
-//Here starts Loin Form
+
 const LoginForm = ({ onSubmit }) => {
   const [email, setEmail] = useState('');
   const [Adgangskode, setAdgangskode] = useState('');
@@ -18,7 +153,7 @@ const LoginForm = ({ onSubmit }) => {
       <h2>Login</h2>
       <p>Indtast dit brugernavn og adgangskode for at logge ind</p>
       <label>
-        <input className='login'
+        <input
           type="email"
           placeholder="Email"
           value={email}
@@ -28,7 +163,7 @@ const LoginForm = ({ onSubmit }) => {
 
       <br />
       <label>
-        <input className='login'
+        <input
           type="password"
           placeholder="Adgangskode"
           value={Adgangskode}
@@ -37,10 +172,7 @@ const LoginForm = ({ onSubmit }) => {
       </label>
 
       <br />
-      <div className="login-button">
       <button type="submit">Login</button>
-      <button type="submit">Annuller</button>
-      </div>
     </form>
   );
 };
@@ -53,16 +185,16 @@ const SignUpForm = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ Navn, email, Adgangskode });
-    
+    onSubmit(email, Adgangskode);
   };
+  
 
   return (
     <form onSubmit={handleSubmit}>
       <h2>Sign Up</h2>
       <label>
         Navn:
-        <input 
+        <input
           type="text"
           value={Navn}
           onChange={(e) => setNavn(e.target.value)}
@@ -97,10 +229,64 @@ const SignUpForm = ({ onSubmit }) => {
 };
 
 const Login = () => {
-  const handleLogin = (data) => {
-    // her håndter vi login 
-    console.log('Login:', data);
+  const handleLogin = async ({ email, Adgangskode }) => {
+    try {
+      const response = await fetch('http://localhost:4000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username: email, password: Adgangskode }),
+      });
+
+      const data = await response.json();
+  
+      if (response.ok) {
+        // Save the access token in the local storage, or wherever you prefer
+        localStorage.setItem('access_token', data.access_token);
+  
+        // Redirect to the user's dashboard or any other page
+        window.location.href = '/';
+      } else {
+        console.error('Login failed:', data.message);
+        // Handle the login failure, e.g., by showing an error message to the user
+      }
+
+      // Rest of the code remains the same
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
   };
+  
+  // const handleLogin = async (email, Adgangskode) => {
+  //   try {
+  //     const response = await fetch('http://localhost:4000/login', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ username: email, password: Adgangskode }),
+  //     });
+  
+  //     const data = await response.json();
+  
+  //     if (response.ok) {
+  //       // Save the access token in the local storage, or wherever you prefer
+  //       localStorage.setItem('access_token', data.access_token);
+  
+  //       // Redirect to the user's dashboard or any other page
+  //       window.location.href = '/dashboard';
+  //     } else {
+  //       console.error('Login failed:', data.message);
+  //       // Handle the login failure, e.g., by showing an error message to the user
+  //     }
+  //   } catch (error) {
+  //     console.error('An error occurred:', error);
+  //     // Handle the network error
+  //   }
+  // };
+  
+  
 
   const handleSignUp = (data) => {
     // her håndter vi signup 
@@ -117,12 +303,12 @@ const Login = () => {
         <LoginForm onSubmit={handleLogin} />
       )}
       <p>
-        {/* {showSignUp
+        {showSignUp
           ? 'Already have an account?'
           : "Don't have an account yet?"}
         <button onClick={() => setShowSignUp(!showSignUp)}>
           {showSignUp ? 'Login' : 'Sign Up'}
-        </button> */}
+        </button>
       </p>
     </div>
 
@@ -132,5 +318,3 @@ const Login = () => {
 };
 
 export default Login;
-
-

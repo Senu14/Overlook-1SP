@@ -7,7 +7,7 @@ import HotellerDestinationer from '../../Pages/HotellerDestinationer/HotelerDest
 import Værelser from '../../Pages/Værelser/Værelser';
 import Reservation from '../../Pages/Reservation/Reservation';
 import Login from '../../Pages/Login/Login';
-
+import Cities from '../../Pages/HotellerDestinationer/Hoteller/Cities';
 //Layouts that wrapped the other pages
 import Navigation from '../../Components/Navigations/Navigations';
 
@@ -16,10 +16,12 @@ const AppRouter = () => {
      <Routes>
      <Route index path="/" element={<Forside />} />
      <Route path= "/" element={<Navigation />} />
-     <Route path="/Hoteller & Destinationer" element={<HotellerDestinationer />} />
+     <Route path="HotellerDestinationer" element={<HotellerDestinationer />}>
+       </Route>
      <Route path="/Værelser" element={<Værelser />} />
      <Route path="/Reservation" element={<Reservation />} />
      <Route path="/login" element={<Login/>} />
+     <Route path="/destinations/:slug" element={<Cities/>} />
 
 </Routes>
   )
