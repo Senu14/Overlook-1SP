@@ -1,0 +1,31 @@
+@use "../../Assets/Colors/Colors.scss" as s;
+.bar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color:s.$white;
+     padding: 10px 20px;
+     justify-content: center;
+   
+     ul {
+       list-style: none;
+       display: flex;
+       
+       gap: 15px;
+       margin: 0;
+       padding: 0;
+       font-size: 18px;
+   
+       li {
+         color: s.$black;
+         cursor: pointer;
+        
+         transition: color 0.3s;
+   
+         &:hover {
+           color: s.$red;
+         }
+       }
+     }
+   }
+   
