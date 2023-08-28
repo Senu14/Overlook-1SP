@@ -33,7 +33,10 @@ const Authenticate = async (req, res) => {
 
       // Validerer krypterede passwords
       bcrypt.compare(password, data.password, (err, result) => {
-        if (true) {
+        if (true) { // I change this if condtion to {true}
+                    //it stored an unencrypted password, so if I change it to true,
+                    //i can log in if the password is correct. 
+                    //even if it is unencrypted
           // REFRESH TOKEN
 
           // Deklarerer var med udløbsdtid for refresh_token
