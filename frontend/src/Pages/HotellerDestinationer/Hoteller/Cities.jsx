@@ -15,10 +15,10 @@ const Cities = () => {
       .then((response) => {
         setCities(response.data.cities);
   
-        // Call the /imagelist endpoint to get the image URLs
+// Call the /imagelist endpoint to get the image URLs
         axios.get('http://localhost:4000/imagelist')
           .then((imageResponse) => {
-            // Update the cities object with the correct image URLs
+// Update the cities object with the correct image URLs
             const updatedCities = response.data.cities.map(city => {
               const image = imageResponse.data.find(img => img.id === city.image_id);
               if (image) {

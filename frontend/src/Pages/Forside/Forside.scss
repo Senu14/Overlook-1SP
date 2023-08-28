@@ -1,11 +1,10 @@
 @use "../../Assets/Colors/Colors.scss" as s;
 .news-card {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  width: 100%;
+  margin: auto;
   justify-content: space-between;
-  gap: 20px;
-  padding: 30px;
-  
+  flex-wrap: wrap;
 .card {
   border: 1px solids s.$lightgrey;
   border-radius: 15px;
@@ -33,6 +32,19 @@
     max-width: 250px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+  @media screen and (max-width: 768px) {
+    .news-card {
+      flex-direction: column;
+  
+    .img-card {
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          padding: 1rem;
+        }
+      }
+    }
+  
   
      
      

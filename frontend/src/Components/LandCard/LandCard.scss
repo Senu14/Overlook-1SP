@@ -12,6 +12,7 @@
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  background: s.$white;
   position: relative;
 }
 
@@ -23,7 +24,7 @@
 
 .card-content {
   padding: 15px;
-  background: s.$white;
+ 
 
 .card-title {
     font-size: 18px;

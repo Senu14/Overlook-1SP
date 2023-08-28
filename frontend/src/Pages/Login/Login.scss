@@ -1,44 +1,43 @@
 @use "../../Assets/Colors/Colors.scss" as s;
 form {
-     max-width: 270px;
-     margin: 0 auto;
-     margin-top: 30px;
- 
-   
-   h2 {
-     margin-top: 10px;
-     text-align: center;
-    }
-    p {
-      margin-bottom: 5px;
-      margin-top: 10px;
-    }
-   
-   label {
-     display: block;
-     margin-bottom: 10px;
-   }
-   
-   input[type="text"],
-   input[type="email"],
-   input[type="password"] {
-     width: 100%;
-     padding: 9px;
-    //  margin-top: 20px;
-     border-radius: 3px;
-   }
-   .login-button{
-    gap: 3em; 
-    display: flex;
-   button[type="submit"] {
-     width: 100%;
-     padding: 10px;
-     border-radius: 3px;
-     background-color: s.$red;
-     color: s.$white;
-     font-weight: 100;
+  max-width: 300px;
+  margin: 0 auto;
+}
 
-    
-   }
-  }
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: s.$red;
+  color: white;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+}
+.third-button {
+  width: 5%;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: s.$red;
+  color: white;
+  font-weight: bold;
 }

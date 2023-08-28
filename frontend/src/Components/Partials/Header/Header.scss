@@ -57,7 +57,21 @@ li.header__menu {
    }
   }
 }
-
 @media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
 
-   }
+    p {
+      padding-left: 1rem;
+    }
+
+    .headerNav {
+      ul {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem;
+      }
+    }
+  }
+}

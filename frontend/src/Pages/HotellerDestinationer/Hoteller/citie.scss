@@ -43,3 +43,11 @@ padding: 0;
            
 }
 }
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    }
+    .bar ul {
+      flex-direction: column;
+    }
+  }

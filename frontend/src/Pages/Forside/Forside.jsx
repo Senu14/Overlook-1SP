@@ -35,9 +35,9 @@ const Forside = () => {
         />
                 
       <div className='overlay'>
-        <Link to={`/hotels`}>
+        <Link to={`/HotellerDestinationer`}>
         <h4>{data.title}</h4>
-        <p>{data.teaser}</p>
+        {/* <p>{data.teaser}</p> */}
         </Link>
         
       </div>
