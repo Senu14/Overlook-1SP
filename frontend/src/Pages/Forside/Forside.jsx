@@ -23,10 +23,11 @@ const Forside = () => {
   return (
     <>
     <SlideWrapper />
+    <div className='container'>
     <div className='news-card'>
       
 {data &&
-    data.slice(0,6).map((data) =>(
+    data.slice(0,4).map((data) =>(
       <figure className='img-card' key={data.id}>
         <img
         src={`http://localhost:4000/images/${data.image.filename}`} alt="image"
@@ -34,14 +35,17 @@ const Forside = () => {
                 
       <div className='overlay'>
         <Link to={`/HotellerDestinationer`}>
-        <h4>{data.title}</h4>
-        {/* <p>{data.teaser}</p> */}
+        <div className='overlay_down'>
+        <h4 className='overlay_title'>{data.title}</h4>
+        <p className='overlay_des'>{data.teaser}</p>
+        </div>
         </Link>
         
       </div>
       </figure>
       ))} 
-</div>          
+</div> 
+</div>         
     </>
   );
      

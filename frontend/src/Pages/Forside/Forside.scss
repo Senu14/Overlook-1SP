@@ -1,16 +1,30 @@
 @use "../../Assets/Colors/Colors.scss" as s;
+*{
+    margin: 0;
+    padding: 0;
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+        
 .news-card {
-  display: flex;
-  width: 100%;
-  margin: auto;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  bottom: 10px;
+    display: flex;
+    width: 100%;
+    margin: 1rem;
+    
+    justify-content: space-between;
+    flex-wrap: wrap;
 .card {
-  border: 1px solids s.$lightgrey;
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    width: 250px;
+    height: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background: s.$white;
+    position: relative;
   
   img {
     width: 50%;
@@ -18,6 +32,52 @@
       }
     }
     
+  }
+}
+  .overlay {
+   position: relative;
+ 
+  height: 150px;
+  background-color: s.$lightgrey;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  }
+  .overlay:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  .overlay_down {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: s.$lightgrey;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .overlay:hover .overlay_down {
+    transform: rotateX(0deg);
+  }
+  .overlay_title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 400;
+  }
+  .overlay_des {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.2;
   }
  
   img {
@@ -27,22 +87,27 @@
     background-color: s.$white;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 15px;
+    height: 20%;
     max-width: 250px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+}
+// For screen larger than 600 pixels
   @media screen and (max-width: 768px) {
-    .news-card {
-      flex-direction: column;
+      .news-card { grid-template-columns: repeat(2, 1fr); }
   
     .img-card {
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
-          padding: 1rem;
+          
         }
       }
-    }
+// For screen larger than 900 pixels
+  @media (min-width: 900px) {
+        .news-card { grid-template-columns: repeat(3, 1fr); }
+      }
+    
   
   
      

@@ -6,6 +6,6 @@ export const SlideWrapperStyle2 = styled.div `
      margin-top: 0rem;
      img {
      width: 100%;
-     height: 50%;
+     height: 30%;
 }
 ` 

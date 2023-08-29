@@ -24,7 +24,7 @@ function Footer() {
                 <Link to="/">Forside</Link>{" "}
               </li>
               <li>
-                <a href="/destinationer">Hoteller & Destinationer</a>
+                <a href="/destinationer">H&D</a>
               </li>
               <li>
                 <a href="/vaerelser">Værelser</a>

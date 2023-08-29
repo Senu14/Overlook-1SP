@@ -4,7 +4,7 @@ margin: 0;
 padding: 0;
 .container{
   width: 100%;
-  height: 85%;
+
       
 .bar {
   display: flex;
@@ -37,7 +37,7 @@ padding: 0;
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 90vh;
+ 
 .left{
     margin:25px;
     height: 90%;
@@ -50,7 +50,7 @@ padding: 0;
     display: flex;
     width: 100%;
     margin: auto;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-wrap: wrap;
     }
 }

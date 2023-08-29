@@ -166,7 +166,7 @@ if (!isLoggedIn) {
 
 {/* kmmenter her*/}
         <label for="Textarea"></label>
-    <textarea placeholder="Kommentarer" value={Kommentarer} id="Textarea" rows="4" cols="36"></textarea>
+    <textarea placeholder="Kommentarer" value={Kommentarer} id="Textarea" rows="4" cols="39"></textarea>
 
     <label className='kryds'>
         <input type="radio" name="Pris" value="kryds"/> Jeg accepterer hermed Overlooks betingelser (sæt kryds)
