@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import Cards from '../../Components/Cards/Cards';
-// import { ContentWrapper } from '../../App/Elements/ContentWrapper/ContentWrapper';
 import SlideWrapper from '../../App/Elements/SlideWrapper/SlideWrapper';
 import { Link } from 'react-router-dom';
 import './Forside.scss';
