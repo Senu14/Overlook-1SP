@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SlideWrapper1 from '../../App/Elements/SlideWrapper/SlideWrapper1';
 import { Link } from 'react-router-dom';
-import LandCard from '../../Components/LandCard/LandCard';
+import LandCard from '../../Components/D.cards/LandCard/LandCard';
 import './hotelerDestinationer.scss';
 // import cors from 'cors';
 import axios from 'axios';
