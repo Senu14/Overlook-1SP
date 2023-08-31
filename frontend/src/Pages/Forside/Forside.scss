@@ -11,7 +11,7 @@
   justify-content: center;
   margin-bottom: 3rem;
   
-}
+
    
 
 //new scc
@@ -22,11 +22,12 @@ margin: 10px;
 min-width: 230px;
 max-width: 315px;
 width: 100%;
-color: #141414;
+color: s.$black;
 text-align: left;
 line-height: 1.4em;
 font-size: 16px;
 }
+
 .commen * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -37,11 +38,12 @@ font-size: 16px;
   max-width: 100%;
   vertical-align: top;
 }
+
 .commen figcaption {
   position: absolute;
   top: calc(77%);
   width: 100%;
-  background-color: #ffffff;
+  background-color: s.$white;
   padding: 15px 25px 65px;
 }
 .commen figcaption:before {
@@ -55,21 +57,23 @@ font-size: 16px;
   background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
   background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
 }
-.commen h3,
+.commen h4,
 .commen p {
   margin: 0 0 10px;
 }
-.commen h3 {
-  font-weight: 200;
-  font-size: 1.4em;
-  line-height: 1.1em;
-  font-family: 'Oswald', Arial, sans-serif;
+.commen h4 {
+  font-weight: 80;
+  font-size: 1.1em;
+  line-height: 1.0em;
+  font-family: "Open-sans", sans-serif;
   text-transform: uppercase;
 }
 .commen p {
   font-size: 0.9em;
   letter-spacing: 1px;
   opacity: 0.9;
+  color: s.$darkgrey;
+  font-family: "Open-sans", sans-serif;
 }
 .commen a {
   position: relative;
@@ -96,11 +100,13 @@ h4{
   }
 }
 }
+}
+
 
 
 // For screen larger than 600 pixels
   @media screen and (max-width: 768px) {
-      .Card-container { grid-template-columns: repeat(2, 1fr); }
+      .Card-container { grid-template-columns: repeat(1, 2fr); }
       .Card-container {
           flex-direction: column;
           align-items: center;

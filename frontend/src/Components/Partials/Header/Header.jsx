@@ -17,15 +17,14 @@ const Header = () => {
   return (
     <>
     <header className="header">
+    {/* <a href="http://localhost:3000/" class="nav-link"> */}
     <img className="Top-logo"
     src={require("../../../Assets/Images/logo.png")}
     alt="logo"
   />
+  {/* </a> */}
     
       <button className="header__burger" onClick={toggleMenu}>
-        <span className="header__burger-line"></span>
-        <span className="header__burger-line"></span>
-        <span className="header__burger-line"></span>
       </button>
       {isOpen && (
         <ul className="header__menu">
