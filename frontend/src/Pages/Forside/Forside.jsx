@@ -26,7 +26,7 @@ const Forside = () => {
     <div className='Card-container'>
    
 {data &&
-    data.slice(0,4).map((data) =>(
+    data.slice(0,6).map((data) =>(
       <figure class="commen" key={data.id}> 
       <img src={`http://localhost:4000/images/${data.image.filename}`} alt="image" />       
       <figcaption>
