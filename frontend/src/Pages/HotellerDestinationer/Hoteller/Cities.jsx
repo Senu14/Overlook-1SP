@@ -41,7 +41,7 @@ const Cities = () => {
 
   return (
     <div className='container'>
-      <div className="wallpaper"></div>
+     
       <div className="bar">
         <ul>
         <li>Danmark</li>

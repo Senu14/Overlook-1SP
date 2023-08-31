@@ -12,7 +12,7 @@ const Forside = () => {
   useEffect(() => {
     const getData = async () => {
       const url = 'http://localhost:4000/news';
-      const result = await axios.get(url);
+    const result = await axios.get(url);
       console.log(result);
       setData(result.data)  
       
@@ -23,33 +23,33 @@ const Forside = () => {
   return (
     <>
     <SlideWrapper />
-    <div className='container'>
-    <div className='news-card'>
-      
+    <div className='Card-container'>
+   
 {data &&
     data.slice(0,4).map((data) =>(
-      <figure className='img-card' key={data.id}>
-        <img
-        src={`http://localhost:4000/images/${data.image.filename}`} alt="image"
-        />
-                
-      <div className='overlay'>
+      <figure class="commen" key={data.id}> 
+      <img src={`http://localhost:4000/images/${data.image.filename}`} alt="image" />       
+      <figcaption>
         <Link to={`/HotellerDestinationer`}>
-        <div className='overlay_down'>
-        <h4 className='overlay_title'>{data.title}</h4>
-        <p className='overlay_des'>{data.teaser}</p>
-        </div>
+        <h4>{data.title}</h4>
+        <p>{data.teaser}</p>
         </Link>
+        </figcaption>
+        </figure>
         
-      </div>
-      </figure>
-      ))} 
-</div> 
-</div>         
-    </>
-  );
-     
-    
   
-}
+    ))}
+        </div>          
+    </>
+    
+  )
+    
+    
+ 
+ 
+   }
+     
+
+  
+
 export default Forside;

@@ -39,21 +39,20 @@
   }
 }
 
-// @media screen and (max-width: 768px) {
-//   .main-footer {
-//     flex-direction: column;
+@media screen and (max-width: 768px) {
+  .main-footer {
+    flex-direction: column;
 
-//     p {
-//       padding-left: 1rem;
-//     }
+    p {
+      padding-left: 1rem;
+    }
 
-//     .footerNav {
-//       ul {
-//         flex-direction: column;
-//         justify-content: space-around;
-//         align-items: center;
-//         padding: 1rem;
-//       }
-//     }
-//   }
-// }
+    .footerNav {
+      ul {
+        grid-template-columns: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
